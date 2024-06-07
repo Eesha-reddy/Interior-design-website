@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div id="imageGallery" class="image-gallery">
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo2.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <!--<li id="loadImagesBtn" ><a  target="_blank">Bedroom</a></li>
+                 <li ><button id="loadImagesBtn">bedroom</button></li> -->
+                 <li><a href="bedroom.html" target="_blank" >Bedroom</a></li>
+                <li><a href="dining.html"  target="_blank">Dining</a></li>
+                <li><a href="kitchen.html"  target="_blank">Kitchen</a></li>
+                <li><a href="contact.html"  target="_blank">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>DESIGN YOUR HOME</h1>
+            <p>We create home more aesthetic</p>
+            
+            <div>
+                <a href="home.html" target="_blank">
+                <button type="button"><span></span>
+                    GET STARTED 
+                </button>
+            </a>
+            
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!--
+    <script>
+        const accessKey = '9ELgmw46fZsq9yaM167LQp8loBG4JQYjN2dekn9VH8M'; // Replace with your Unsplash API access key
+const imageGallery = document.getElementById('imageGallery');
+
+document.getElementById('loadImagesBtn').addEventListener('click', () => {
+    fetchRandomBedroomImages(accessKey, 100) // Fetch 5 images (you can change the number)
+        .then(images => {
+            displayImages(images);
+        })
+        .catch(error => {
+            console.error('An error occurred while fetching the images:', error);
+        });
+});
+
+function fetchRandomBedroomImages(accessKey, count) {
+    const endpoint = `https://api.unsplash.com/photos/random?query=bedroom&count=${count}&client_id=${accessKey}`;
+    
+    return fetch(endpoint)
+        .then(response => response.json());
+}
+
+function displayImages(images) {
+    imageGallery.innerHTML = '';
+    
+    images.forEach(imageData => {
+        const imageElement = document.createElement('img');
+        imageElement.src = imageData.urls.regular;
+        imageElement.alt = imageData.description || 'Bedroom Image';
+        imageGallery.appendChild(imageElement);
+    });
+}
+
+
+
+</script>
+-->
+</body>
+</html>
